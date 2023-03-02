@@ -51,6 +51,7 @@ export default class Bot extends Client {
     start () {
         require('~/framework/handlers/EventHandler')(this)
         require('~/framework/handlers/CommandHandler')(this)
+        require('~/framework/handlers/ComponentHandler')(this)
 
         this.login(this.login_token)
             .then(_ => console.log(`Logged in!`))

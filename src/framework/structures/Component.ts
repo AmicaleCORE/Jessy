@@ -200,7 +200,7 @@ export class Menu extends Component {
 
         if (this.options.placeholder) menu.setPlaceholder(this.options.placeholder)
         if (this.options.min_values) menu.setMinValues(this.options.min_values)
-        if (this.options.max_values) menu.setMinValues(this.options.max_values)
+        if (this.options.max_values) menu.setMaxValues(this.options.max_values)
 
         return menu
     }
