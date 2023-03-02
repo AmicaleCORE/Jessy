@@ -1,0 +1,16 @@
+###################
+#     FOLDERS     #
+###################
+# JetBrains IDE configuration folder
+.idea/
+
+# NodeJS installed modules
+node_modules/
+
+# Compilation folder
+dist/
+
+#################
+#     FILES     #
+#################
+.env
