@@ -15,7 +15,7 @@ apply_foreign_keys()
 
 export function initDatabase(force?: boolean) {
     orm.sync({ force })
-        .then(async _ => {
+        .then(_ => {
             console.log(`Database synchronized.`)
         })
         .catch((error: Error) => console.log(error))
