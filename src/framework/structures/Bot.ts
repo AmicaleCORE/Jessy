@@ -24,16 +24,16 @@ export default class Bot extends Client {
         this.commands = new Collection()
     }
 
-    registerEvent (event: Event) {
+    registerEvent (event: Event): void {
         if (event.once) this.once(event.name, event.callback.bind(null, this))
         else this.on(event.name, event.callback.bind(null, this))
     }
 
-    registerCommand (command: Command) {
+    registerCommand (command: Command): void {
         this.commands.set(command.name, command)
     }
 
-    registerComponent (component: Component) {
+    registerComponent (component: Component): string {
         if (component instanceof Button) {
             this.buttons.set(component.id.includes('%') ? component.id.split('%')[0] : component.id, component)
             return "Button"
@@ -48,7 +48,7 @@ export default class Bot extends Client {
         return "-"
     }
 
-    start () {
+    start (): void {
         require('~/framework/handlers/EventHandler')(this)
         require('~/framework/handlers/CommandHandler')(this)
         require('~/framework/handlers/ComponentHandler')(this)
