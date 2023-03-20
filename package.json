@@ -1,7 +1,7 @@
 {
-  "name": "bot-template",
+  "name": "jessy",
   "version": "0.1",
-  "description": "This Discord Bot Typescript template will be used in every starting Bot project of the Organization.",
+  "description": "Jessy Secretary - Votre meilleure amie !",
   "main": "dist/App.js",
   "scripts": {
     "serve": "nodemon --watch src -e js,ts,json --exec \"ts-node src/App.ts\"",
@@ -10,19 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SkillSwap-Service/TPL-Discord-Bot.git"
+    "url": "git+https://github.com/AmicaleCORE/Jessy.git"
   },
   "keywords": [
     "Discord BOT",
     "Typescript",
-    "GitHub Template"
+    "Jessy",
+    "Secretary"
   ],
   "author": "Loïc MAES",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/SkillSwap-Service/TPL-Discord-Bot/issues"
+    "url": "https://github.com/AmicaleCORE/Jessy/issues"
   },
-  "homepage": "https://github.com/SkillSwap-Service/TPL-Discord-Bot#readme",
+  "homepage": "https://github.com/AmicaleCORE/Jessy#readme",
   "devDependencies": {
     "@types/node": "^18.14.2",
     "nodemon": "^2.0.20",
