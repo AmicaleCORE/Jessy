@@ -6,7 +6,7 @@ module.exports = (bot: Bot) => {
     const commands: string[] = require(`~/framework/handlers/FileHandler`)(`./src/commands/`, true)
     const table = new Ascii(`Commands`)
 
-    if (commands.length == 0) {
+    if (commands.length === 0) {
         table.addRow('No data!')
         return console.log(table.toString())
     }
