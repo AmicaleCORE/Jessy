@@ -2,6 +2,7 @@ import {Client, Collection, ColorResolvable} from "discord.js";
 import Command from "~/framework/structures/Command";
 import Event from "~/framework/structures/Event";
 import {Button, Component, Menu, Modal} from "~/framework/structures/Component";
+import {initDatabase} from "~/framework/database/Orm";
 
 export default class Bot extends Client {
     login_token: string
@@ -53,6 +54,7 @@ export default class Bot extends Client {
         require('~/framework/handlers/CommandHandler')(this)
         require('~/framework/handlers/ComponentHandler')(this)
 
+        initDatabase()
         this.login(this.login_token)
             .then(_ => console.log(`Logged in!`))
             .catch((error: Error) => console.log(`An error occurred!`, error))
