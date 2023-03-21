@@ -5,23 +5,13 @@ import {
     PermissionFlagsBits,
     ChannelType,
     ButtonStyle,
-    EmbedBuilder,
-    TextChannel
+    EmbedBuilder
 } from "discord.js";
 import {createTicket} from "~/framework/functions/Tickets";
 
 module.exports = new Button("btn-create-ticket", async (bot: Bot, interaction: ButtonInteraction) => {
-    const member = interaction.member
-
     createTicket(bot, interaction)
-        .then(async (channel: TextChannel) => {
-            await channel.send({
-                content: `|| <@${member?.user.id}> ||`,
-                embeds: [
-                    new EmbedBuilder()
-                        .setDescription(`:timer: Coming soon...`)
-                ]
-            })
+        .then(async () => {
             await interaction.reply({
                 content: undefined,
                 embeds: [
@@ -52,6 +42,7 @@ module.exports = new Button("btn-create-ticket", async (bot: Bot, interaction: B
             })
             await interaction.reply({
                 content: undefined,
+                ephemeral: true,
                 embeds: [
                     new EmbedBuilder()
                         .setColor("#F11")
