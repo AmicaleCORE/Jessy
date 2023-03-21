@@ -54,7 +54,7 @@ export default class Bot extends Client {
         require('~/framework/handlers/CommandHandler')(this)
         require('~/framework/handlers/ComponentHandler')(this)
 
-        initDatabase()
+        initDatabase(true /* DEV ONLY */)
         this.login(this.login_token)
             .then(_ => console.log(`Logged in!`))
             .catch((error: Error) => console.log(`An error occurred!`, error))

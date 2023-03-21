@@ -17,7 +17,6 @@ module.exports = new Command("setup", async (bot: Bot, interaction: CommandInter
         ephemeral: true
     })
 
-    // TODO: channel.send() + then (includes =>)
     channel.send({
         content: undefined,
         embeds: [
