@@ -21,7 +21,19 @@ module.exports = new Command("setup", async (bot: Bot, interaction: CommandInter
         content: undefined,
         embeds: [
             new EmbedBuilder()
-                .setDescription(":timer: Coming soon...")
+                .setTitle(`Tickets`)
+                .setDescription(`Bienvenue dans notre système de tickets.
+                
+                **__Pourquoi ont-ils été fais__ ?**
+                :point_right: Les tickets sont faits pour proposer des choses, discuter et centraliser les informations d'un événement en particulier ou tout simplement d'un projet.
+                Ils sont avant tout un outil nous permettant de gagner en qualité de notre organisation mais également supprimer du contenu dont nous n'avons plus besoin une fois l'événement passé ou le projet terminé.
+                
+                **__Comment créer un ticket__ ?**
+                :point_right: Ils vous suffit de cliquer sur le bouton attaché à ce message et suivre les informations qui vous seront données par la suite.
+                
+                Merci d'utiliser le Bot à bon escient et de ne pas en abuser.
+                :warning: **Tout abus sera sanctionné !**`)
+                .setColor('#438fc9')
         ],
         components: [
             new ActionRowBuilder<ButtonBuilder>().setComponents(require('~/components/buttons/OpenTicket').build())
