@@ -2,7 +2,6 @@ import {Button, ButtonOptions} from "~/framework/structures/Component";
 import Bot from "~/framework/structures/Bot";
 import {
     ButtonInteraction,
-    ChannelType,
     ButtonStyle,
     EmbedBuilder
 } from "discord.js";
