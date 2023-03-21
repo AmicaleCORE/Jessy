@@ -1,6 +1,6 @@
 import {models} from "~/framework/database/Orm";
 
-export async function createTicket(channel_id: string, creator_id: string): Promise<any> {
+export function createTicket(channel_id: string, creator_id: string): Promise<any> {
     return models.ticket.create({
         type: null,
         channel_id,
