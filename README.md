@@ -1,9 +1,5 @@
-# TPL Discord Bot
-Dear developer;  
-We offer you today this brand new Typescript Discord Bot template!
+# Jessy
+Votre meilleure amie !
 
-Discover some utils functions, pre-build handlers, sample code, etc...  
-Let's jump into the configuration.
-
-## Table Of Contents
-Todo...
+## Base de données
+[![Database model](resources/database-model.png)](resources/database-model.png)
