@@ -5,7 +5,6 @@ import {
     EmbedBuilder,
     Guild,
     Interaction,
-    PermissionFlagsBits,
     TextChannel,
     User
 } from "discord.js";
