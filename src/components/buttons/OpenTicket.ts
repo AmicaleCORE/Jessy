@@ -2,14 +2,13 @@ import {Button, ButtonOptions} from "~/framework/structures/Component";
 import Bot from "~/framework/structures/Bot";
 import {
     ButtonInteraction,
-    PermissionFlagsBits,
     ChannelType,
     ButtonStyle,
     EmbedBuilder
 } from "discord.js";
 import {createTicket} from "~/framework/functions/Tickets";
 
-module.exports = new Button("btn-create-ticket", async (bot: Bot, interaction: ButtonInteraction) => {
+module.exports = new Button("btn-create-ticket", (bot: Bot, interaction: ButtonInteraction) => {
     createTicket(bot, interaction)
         .then(async () => {
             await interaction.reply({
